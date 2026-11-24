@@ -6,7 +6,8 @@ function Layout() {
       <header>
         <nav>
           <NavLink to="/" end>Home</NavLink>
-          {/* TODO: add nav links */}
+          <NavLink to="/sign-up" end>Sign Up</NavLink>
+          <NavLink to="/login" end>Login</NavLink>
         </nav>
       </header>
       <main>

@@ -1,0 +1,94 @@
+/* Centers the card in the page */
+.signup {
+    min-height: 80svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+    box-sizing: border-box;
+}
+
+/* White box around the image + form */
+.signup-card {
+    --card-text: #6b6375;
+    --card-text-h: #08060d;
+    --card-border: #e5e4e7;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 820px;
+    min-height: 480px;
+    background: #fff;
+    color: var(--card-text);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.signup-card h2 {
+    color: var(--card-text-h);
+}
+
+.signup-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f3ec;
+    font-family: var(--mono);
+    position: relative;
+}
+
+/* Fill the left half; crop instead of stretching if the shape changes */
+.signup-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.signup-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.signup-form input,
+.signup-form button {
+    font: inherit;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--card-border);
+    background: #fff;
+    color: var(--card-text-h);
+}
+
+.signup-form button {
+    cursor: pointer;
+    background: #aa3bff;
+    border-color: #aa3bff;
+    color: #fff;
+}
+
+/* Hide the image on narrow screens; the form takes the full card */
+@media (max-width: 768px) {
+    .signup-card {
+        grid-template-columns: 1fr;
+        min-height: 0;
+    }
+
+    .signup-image {
+        display: none;
+    }
+}
