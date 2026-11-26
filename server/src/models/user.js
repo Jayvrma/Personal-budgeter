@@ -13,3 +13,10 @@ export async function createUser(username, email, passwordHash) {
     const res = await pool.query(query, values);
     return res.rows[0];
 }
+
+export async function getUserByUsername(username) {
+    const query = 'SELECT * FROM users WHERE username = $1';
+    const values = [username];
+    const res = await pool.query(query, values);
+    return res.rows[0];
+}

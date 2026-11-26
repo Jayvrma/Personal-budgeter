@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 import './SignUp.css'
-import signinImage from '../images/signin.jpg'
+import signupImage from '../images/signup.jpg'
 import Toast from '../components/Toast.jsx'
 
 function SignUp() {
@@ -37,7 +37,7 @@ function SignUp() {
         <section className="signup">
             <div className="signup-card">
                 <div className="signup-image">
-                    <img src={signinImage} alt="Welcome to OpenBudget" />
+                    <img src={signupImage} alt="Welcome to OpenBudget" />
                 </div>
                 <div className="signup-panel">
                     <h2>Create an account</h2>
